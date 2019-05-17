@@ -45,17 +45,4 @@ public class ctci_1_2
         
     }
 
-    public static void main(String[] args)
-    {
-        String string1 = "permutation";
-        String string2 = "noitatumren";
-        System.out.println("string1: " + string1 + " string2: " + string2);
-        System.out.println("Permutation? " + checkPermutation(string1, string2));
-
-        string2 = "noitatumrep";
-        System.out.println("string1: " + string1 + " string2: " + string2);
-        System.out.println("Permutation? " + checkPermutation(string1, string2));
-
-    }
-
 }

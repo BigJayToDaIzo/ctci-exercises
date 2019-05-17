@@ -10,17 +10,13 @@ public class ctci_1_1
     {
         for (int i = 0; i < str.length() - 1; i++)
         {
-            if(str.indexOf(i, i + 1) == -1) return false;
-
+            int temp = str.indexOf(i, i + 1);
+            if(str.indexOf(str.charAt(i), i + 1) != -1)
+            {
+               return false;
+            }
         }
         return true;
     }
-    public static void main(String[] args)
-    {
-        System.out.println("string1: abcdefg");
-        System.out.println(isUnique("abcdefg"));
-        System.out.println("string2: abcdcba");
-        System.out.println(isUnique("abcdcba"));
 
-    }
 }
