@@ -1,10 +1,14 @@
-import java.util.HashMap;
-import java.util.Map;
+package ch1;
+/*
+Check Permutation: Given two strings, write a method to decide if one is
+a permutation of the other.
+*/
 
+import java.util.HashMap;
 public class ctci_1_2 
 {   
     
-    private static boolean checkPermutation(String str1, String str2)
+    public static boolean checkPermutation(String str1, String str2)
     {
         //are strings same length? 
         if(str1.length() != str2.length()) 
