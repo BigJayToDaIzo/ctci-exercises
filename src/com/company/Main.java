@@ -19,6 +19,11 @@ public class Main {
         System.out.println("input str: 'input with spaces'");
         System.out.println(ctci_1_3.urlify("input with spaces".toCharArray()));
 
+        //problem 4 tests
+        System.out.println("input str: 'aabbccd'");
+        System.out.println(ctci_1_4.isPermuPalindrome("aabbccd"));
+        System.out.println("input str: 'aabcddee'");
+        System.out.println(ctci_1_4.isPermuPalindrome("aabcddee"));
 
     }
 }
