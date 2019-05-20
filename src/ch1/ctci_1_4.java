@@ -2,6 +2,7 @@ package ch1;
 
 import java.util.HashMap;
 import java.util.Map;
+import static ch1.helpers.stringToHashMap;
 
 public class ctci_1_4 {
     /*
@@ -14,22 +15,8 @@ public class ctci_1_4 {
     public static boolean isPermuPalindrome(String str)
     {
         int singleCharFound = 0; //can be center char, must not exceed 1
-        boolean moddableByTwo = true; //non even counts of letters breaks palindrome
         //build hashmap of string
-        HashMap<Character, Integer> map = new HashMap<>();
-        for(int i = 0; i < str.length(); i++)
-        {
-            char c = str.charAt(i);
-            if(map.containsKey(c))
-            {
-                map.put(c, map.get(c) + 1);
-
-            } else
-            {
-                map.put(c, 1);
-
-            }
-        }
+        HashMap<Character, Integer> map = stringToHashMap(str);
         for(Map.Entry<Character, Integer> pair: map.entrySet())
         {
             if(pair.getValue() == 1) singleCharFound += 1;

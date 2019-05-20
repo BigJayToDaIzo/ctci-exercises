@@ -3,9 +3,12 @@ package ch1;
 Check Permutation: Given two strings, write a method to decide if one is
 a permutation of the other.
 */
-
+import ch1.helpers;
 import java.util.HashMap;
-public class ctci_1_2 
+
+import static ch1.helpers.stringToHashMap;
+
+public class ctci_1_2
 {   
     
     public static boolean checkPermutation(String str1, String str2)
@@ -17,29 +20,9 @@ public class ctci_1_2
         } else
         {
             //build hashmap of each string
-            HashMap<Character, Integer> map1 = new HashMap<>();
-            HashMap<Character, Integer> map2 = new HashMap<>();
-            for(int i = 0; i < str1.length(); i++)
-            {
-                char c1 = str1.charAt(i);
-                char c2 = str2.charAt(i);
-                if(!map1.containsKey(c1))
-                {
-                    map1.put(c1, 1);
-                } else
-                {
-                    map1.put(c1, map1.get(c1) + 1);
-                }
+            HashMap<Character, Integer> map1 = stringToHashMap(str1);
+            HashMap<Character, Integer> map2 = stringToHashMap(str2);
 
-                if(!map2.containsKey(c2))
-                {
-                    map2.put(c2, 1);
-                } else
-                {
-                    map2.put(c2, map2.get(c2) + 1);
-                }
-                
-            }
             return map1.equals(map2);
         }
         

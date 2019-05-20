@@ -1,4 +1,5 @@
 package ch1;
+import static ch1.helpers.stringToHashMap;
 
 public class ctci_1_5 {
     /*
